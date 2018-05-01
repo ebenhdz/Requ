@@ -1,0 +1,7 @@
+html, body{
+    height: 100%;
+}
+.navbar{
+    background-color: #243a51;
+    color: #fff;
+}
