@@ -26,18 +26,20 @@
 
                         <!--Body-->
                         <div class="md-form">
-                            <input id="Form-email1" class="form-control" type="text">
-                            <label for="Form-email1">Introduce tu correo electrónico</label>
+                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                            <label for="email">Introduce tu correo electrónico</label>
                         </div>
-
-                        <div class="md-form pb-3">
-                            <input id="Form-pass1" class="form-control" type="password">
-                            <label for="Form-pass1">Introduce tu contraseña</label>
-                            <p class="font-small blue-text d-flex justify-content-end">
+                        <div class="md-form">
+                            <input id="password" type="password" class="form-control" name="password" required>
+                            <label for="password">Introduce tu contraseña</label>
+                            <p class="font-small blue-text d-flex justify-content-end mb-0">
                                 <a href="{{ route('password.request') }}" class="blue-text ml-1"> ¿Olvidaste la contraseña?</a>
                             </p>
                         </div>
-
+                        <div class="form-check mb-2 pl-0 checkbox-primary-filled">
+                            <input type="checkbox" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }} class="filled-in form-check-input">
+                            <label class="form-check-label" for="remember">Recordarme</label>
+                        </div>
                         <div class="text-center mb-3">
                             <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a waves-effect waves-light">Iniciar sesión</button>
                         </div>
