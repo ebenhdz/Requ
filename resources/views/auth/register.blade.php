@@ -26,16 +26,31 @@
                                 <div class="md-form pb-2">
                                     <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                                     <label for="name">Tu nombre</label>
+                                    @if ($errors->has('name'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                    @endif
                                 </div>
 
                                 <div class="md-form pb-2">
                                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                                     <label for="email">Correo electrónico</label>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                    @endif
                                 </div>
 
                                 <div class="md-form pb-2">
                                     <input id="password" type="password" class="form-control" name="password" required>
                                     <label for="password">Contraseña</label>
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                    @endif
                                 </div>
 
                                 <div class="md-form pb-2">

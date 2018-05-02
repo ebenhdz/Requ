@@ -28,10 +28,20 @@
                         <div class="md-form">
                             <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                             <label for="email">Introduce tu correo electrónico</label>
+                            @if ($errors->has('email'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
                         </div>
                         <div class="md-form">
                             <input id="password" type="password" class="form-control" name="password" required>
                             <label for="password">Introduce tu contraseña</label>
+                            @if ($errors->has('password'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
                             <p class="font-small blue-text d-flex justify-content-end mb-0">
                                 <a href="{{ route('password.request') }}" class="blue-text ml-1"> ¿Olvidaste la contraseña?</a>
                             </p>
@@ -41,7 +51,7 @@
                             <label class="form-check-label" for="remember">Recordarme</label>
                         </div>
                         <div class="text-center mb-3">
-                            <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a waves-effect waves-light">Iniciar sesión</button>
+                            <button type="submit" class="btn blue-gradient btn-block btn-rounded z-depth-1a waves-effect waves-light">Iniciar sesión</button>
                         </div>
 
                     </div>
@@ -129,6 +139,10 @@
         </div>
     </div>
 </div>-->
+
+<footer>
+    <p>Esta aplicación web fue construida para el instituto tecnologico superior de san pedro de las colonias por alumnos del VI semestre generacion- 2016-2020</p>
+</footer>
 @endsection
 
 @section('scripts')

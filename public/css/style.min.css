@@ -5,3 +5,29 @@ html, body{
     background-color: #243a51;
     color: #fff;
 }
+.requisicion_pdf{
+    font-size: 12pt !important;
+}
+.requisicion_pdf table, .requisicion_pdf tr, .requisicion_pdf td{
+    border: 1px solid #000;
+}
+.requisicion_pdf td{
+    padding: 6px 4px;
+}
+.requisicion_pdf td > img {
+    height: 100px;
+    margin: 0 8px;
+}
+.report_line{
+    border-bottom: 1px solid #000;
+}
+.report_data td{
+    font-size: 9pt;
+}
+.report_data tr{
+    min-height: 100px;
+}
+.title_data_table{
+    text-align: center;
+    font-weight: bold;
+}
